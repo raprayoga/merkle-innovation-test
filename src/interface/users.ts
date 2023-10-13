@@ -1,5 +1,8 @@
-export interface UsersResponse {
+export interface UserData extends UserInputPayload {
   id: string
+}
+
+export interface UserInputPayload {
   email: string
   username: string
   password: string
@@ -28,8 +31,8 @@ interface Geo {
 
 export interface UsersSliceState {
   loading: boolean
-  data: UsersResponse[]
-  error?: null | UsersResponse
+  data: UserData[]
+  error?: null | UserData
   page: number
   totalPage: number
   form: UsersPayload
@@ -38,4 +41,19 @@ export interface UsersSliceState {
 export interface UsersPayload {
   sort?: string
   page?: string
+}
+
+export interface UserInputForm {
+  email: string
+  username: string
+  password: string
+  phone: string
+  firstname: string
+  lastname: string
+  city: string
+  street: string
+  number: string
+  zipcode: string
+  lat: string
+  long: string
 }

@@ -1,32 +1,32 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { InputGroup, Input } from "./index";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import type { Meta, StoryObj } from '@storybook/react'
+import { InputGroup, Input } from './index'
+import { HomeIcon } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof Input> = {
   component: Input,
   args: {
-    theme: "primary",
+    theme: 'red',
   },
   argTypes: {
     theme: {
-      control: "select",
-      options: ["primary", "default"],
+      control: 'select',
+      options: ['red', 'default', 'green'],
     },
   },
-  tags: ["autodocs"],
-};
+  tags: ['autodocs'],
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const TextVariant: Story = {
   render: (args) => (
     <InputGroup>
       <Input {...args} placeholder="Placeholder here" className="pr-9" />
-      <p className="absolute right-2 left-auto text-gray">Apply</p>
+      <p className="absolute left-auto right-2 text-gray">Apply</p>
     </InputGroup>
   ),
-};
+}
 
 export const IconVariant: Story = {
   render: (args) => (
@@ -35,4 +35,4 @@ export const IconVariant: Story = {
       <Input {...args} placeholder="Placeholder here" className="pl-8" />
     </InputGroup>
   ),
-};
+}
