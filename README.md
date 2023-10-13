@@ -36,9 +36,9 @@
 
 ## About The Project
 
-This application is a SIMS PPOB app, a simple dashboard app for ppob
-This application is consists of feature like regist, login, profile, topup, purchase, transactions
-This application is a technical test application for the hiring process at nutech
+This application is a simple dashboard app for manage user
+This application is consists of feature like user list, add & edit user
+This application is a technical test application for the hiring process at Merkle Innovation
 You can visit the app [here](https://sims-ppob-rafieachmadprayoga-381u.vercel.app/) too.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -49,9 +49,12 @@ This is major frameworks/libraries used to bootstrap the project.
 
 - [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
+- [![Redux][Redux.js]][Redux-url]
 - [![Storybook][Storybook.js]][Storybook-url]
 - [![TailwindCSS][TailwindCSS.js]][TailwindCSS-url]
 - [![TypeScript][TypeScript.js]][TypeScript-url]
+- [![Jest][Jest.js]][Jest-url]
+- [![Testing-Library][Testing-Library.js]][Testing-Library-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,9 +119,15 @@ Rafie Achmad Prayoga - [Linkedin](https://www.linkedin.com/in/rafie-achmad-prayo
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Redux.js]: https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white
+[Redux-url]: https://redux.js.org/
 [Storybook.js]: https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white
 [Storybook-url]: https://storybook.js.org/
 [TailwindCSS.js]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [TailwindCSS-url]: https://tailwindcss.com/
 [TypeScript.js]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [TypeScript-url]: https://www.typescriptlang.org/
+[Jest.js]: https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white
+[Jest-url]: https://jestjs.io/
+[Testing-Library.js]: https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red
+[Testing-Library-url]: https://testing-library.com/docs/react-testing-library/intro/
