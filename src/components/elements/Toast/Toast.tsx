@@ -2,7 +2,7 @@ import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/utils'
 import { motion } from 'framer-motion'
-import Card from '@/components/units/Card'
+import Card from '@/components/elements/Card'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
 const toastVariant = cva('pr-8 left-1/2 translate-x-[-50%]', {
