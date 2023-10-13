@@ -3,12 +3,14 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/utils'
 
 const buttonVariants = cva(
-  'px-5 py-2 flex items-center justify-center text-center lg:text-sm text-xs rounded cursor-pointer disabled:cursor-not-allowed transition-colors',
+  'px-5 py-2 flex items-center justify-center text-center lg:text-sm text-xs rounded cursor-pointer disabled:cursor-default transition-colors',
   {
     variants: {
       theme: {
         primary: 'bg-primary text-white hover:opacity-90',
         green: 'bg-green',
+        red: 'bg-red',
+        yellow: 'bg-yellow',
       },
       variant: {
         filled: '',
@@ -48,14 +50,36 @@ const buttonVariants = cva(
           'border border-green text-green bg-white hover:bg-green hover:text-white',
       },
       {
+        variant: 'filled',
+        theme: 'red',
+        class: 'bg-red text-white hover:opacity-90',
+      },
+      {
+        variant: 'ghost',
+        theme: 'red',
+        class:
+          'border border-red text-red bg-white hover:bg-red hover:text-white',
+      },
+      {
+        variant: 'filled',
+        theme: 'yellow',
+        class: 'bg-yellow hover:opacity-90',
+      },
+      {
+        variant: 'ghost',
+        theme: 'yellow',
+        class:
+          'border border-yellow text-yellow bg-white hover:bg-yellow hover:text-black',
+      },
+      {
         variant: 'ghost',
         isDisabled: true,
-        class: 'border border-gray text-gray cursor-not-allowed',
+        class: 'border border-gray text-gray cursor-default',
       },
       {
         variant: 'filled',
         isDisabled: true,
-        class: 'bg-gray text-white border-none cursor-not-allowed',
+        class: 'bg-gray text-white border-none cursor-default',
       },
     ],
   }
@@ -82,7 +106,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading && (
           <svg
-            className="m-auto animate-spin inline align-middle w-4"
+            className="m-auto inline w-4 animate-spin align-middle"
             aria-hidden="true"
             role="status"
             viewBox="0 0 100 101"
