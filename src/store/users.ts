@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { UsersResponse, UsersSliceState } from '@/interface/users'
+import { UserData, UsersSliceState } from '@/interface/users'
 import { sliceState } from '@/interface/state'
 import { users } from '@/services/usersService'
 import { autoSignOut } from '@/utils'
@@ -16,7 +16,7 @@ const initialState: UsersSliceState = {
   },
 }
 
-export const usersAsync = createAsyncThunk<UsersResponse[]>(
+export const usersAsync = createAsyncThunk<UserData[]>(
   'users/fetchUsers',
   async (_, { getState, rejectWithValue }) => {
     const state = getState() as sliceState
@@ -55,7 +55,7 @@ export const usersSlice = createSlice({
       })
       .addCase(usersAsync.rejected, (state, action) => {
         state.loading = false
-        state.error = action.payload as UsersResponse
+        state.error = action.payload as UserData
       })
   },
 })

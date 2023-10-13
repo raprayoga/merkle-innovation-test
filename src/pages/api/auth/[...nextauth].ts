@@ -9,12 +9,13 @@ const authOptions: NextAuthOptions = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {},
+      // @ts-ignore
       async authorize(credentials, req) {
         const { username, password } = credentials as LoginInputForm
         const res = await loginUser({ username, password })
         if (res) {
           http.defaults.headers.common.Authorization = res.token
-          return res.token
+          return res
         } else {
           return null
         }
